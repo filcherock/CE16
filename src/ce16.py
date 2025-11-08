@@ -15,10 +15,10 @@ def encode(text):
     for element in positions:
         encoded_positions.append(hex(element * KEY))
     encoded_positions.append(hex(KEY))
-    return ":".join(encoded_positions)
+    return "o".join(encoded_positions)
 
 def decode(encoded_string):
-    encoded_positions = encoded_string.split(":")
+    encoded_positions = encoded_string.split("o")
     last_hex_value = encoded_positions[-1]
     KEY = int(last_hex_value, 16)
     decoded_chars = []
